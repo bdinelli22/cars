@@ -7,31 +7,146 @@
 </head>
 
 <body>
+	<script>
+			var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlidesN(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlideN(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlidesN(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+
+	var slideIndex = 1;
+showSlidesU(slideIndex);
+
+
+function plusSlidesU(n) {
+  showSlidesU(slideIndex += n);
+}
+
+
+function currentSlideU(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlidesU(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides2");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+	
+	</script>
+	
+	<div class="top">
 	<div id="menu">  
 	<ul>
-	    <li><a href="home.html" class="active" id="default"><button>Home</button></a></li>
+	    <li><a href="index.html" class="active" id="default"><button onClick="index.html">Home</button></a></li>
 		<li><a href="UsedCars.html" id="usedcars"><button onClick="UsedCars.html">Used Cars</button></a></li>
-	    <li><a href="page3.html" id="NewCars"><button>New Cars</button></a></li>
+	    <li><a href="newCars.html" id="NewCars"><button onClick="newCars.html">New Cars</button></a></li>
 	    <li><a href="page4.html" id="Contact"><button>Contact</button></a></li>
 	</ul>
 </div>
 	<br /> <br /> <br />
 	<div class="logo"><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/logo.png" alt=""></div>
 	<div id="des"><p>The best luxury cars on the market.<br> For the biggest of spenders!</p></div>
-
+	</div>
 
 <br /> <br /><br />
 
-	<!----<div id="cars">
-		<div><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/reaper.png" alt=""> <p>Lorem ipsum dolor sit amet.</p></div>
-		<div><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/vapid_fmj.png" alt=""> <p>Lorem ipsum dolor sit amet.</p></div>
-		<div><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/grotti_bestia_gts.png" alt=""> <p>Lorem ipsum dolor sit amet.</p></div>
-		<div><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/benefactor_xls.png" alt=""> <p>Lorem ipsum dolor sit amet.</p></div>
-		<div><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/enus_windsor_drop.png" alt=""> <p>Lorem ipsum dolor sit amet.</p></div>
-		<div><img src="../../OneDrive - Shawsheen Valley Technical High School/car dealership/images/albany_roosevelt_valor.png" alt=""> <p>Lorem ipsum dolor sit amet.</p></div>
-	</div> --->
+<div class="slideshow-container2">
+
+ 
+  <div class="mySlides2 fade">
+    <img src="images/benefactor_xls.png" style="width:100%" alt="">
+    <div class="text">Pegassi Reaper</div>
+  </div>
+
+  <div class="mySlides2 fade">
+	  <img src="images/enus_windsor_drop.png" style="" alt="">
+    <div class="text">Vapid FMJ</div>
+  </div>
+
+  <div class="mySlides2 fade">
+    
+    <img src="images/albany_roosevelt_valor.png" style="" alt="">
+    <div class="text2">Grotti Bestia GTS</div>
+  </div>
+
+  <a class="prev" onclick="plusSlidesU(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlidesU(1)">&#10095;</a>
+</div>
+<br>
+	<div style="text-align:center">
+  <span class="dot2" onclick="currentSlideU(1)"></span>
+  <span class="dot2" onclick="currentSlideU(2)"></span>
+  <span class="dot2" onclick="currentSlideU(3)"></span>
+</div>
 	
 	
+<div class="slideshow-container">
+
+ 
+  <div class="mySlides fade">
+    <img src="images/reaper.png" style="width:100%" alt="">
+    <div class="text">Pegassi Reaper</div>
+  </div>
+
+  <div class="mySlides fade">
+	  <img src="images/vapid_fmj.png" style="width:100%" alt="">
+    <div class="text">Vapid FMJ</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="images/grotti_bestia_gts.png" style="width:100%" alt="">
+    <div class="text">Grotti Bestia GTS</div>
+  </div>
+
+  <a class="prev" onclick="plusSlidesN(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlidesN(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlideN(1)"></span>
+  <span class="dot" onclick="currentSlideN(2)"></span>
+  <span class="dot" onclick="currentSlideN(3)"></span>
+</div>
 	
 	
 </body>
